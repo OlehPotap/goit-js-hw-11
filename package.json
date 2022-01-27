@@ -3,14 +3,14 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "http://olehpotap.github.io/goit-js-hw-11/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/OlehPotap/goit-js-hw-11.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "handlebars": "^4.7.7",
-    "notiflix": "^3.2.2"
+    "notiflix": "^3.2.2",
+    "simplelightbox": "^2.10.2"
   }
 }

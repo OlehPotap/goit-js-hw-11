@@ -8,9 +8,13 @@ const OPTIONS = '&image_type=photo&orientation=horizontal&safesearch=true&per_pa
 let pageChanger = 1;
 
 export async function FetchImages(query) {
-  const { data } = await axios.get(
-    `${BASE_URL}?q=${query}${OPTIONS}&page=${pageChanger}&key=${MY_API_KEY}`,
-  );
-  pageChanger += 1;
-  return data;
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}?q=${query}${OPTIONS}&page=${pageChanger}&key=${MY_API_KEY}`,
+    );
+    pageChanger += 1;
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
 }
