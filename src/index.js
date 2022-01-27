@@ -30,12 +30,13 @@ async function SubmitRequest(event) {
           });
         }
       });
-      const lightboxMore = new SimpleLightbox('.gallery a', {});
+      const lightbox = new SimpleLightbox('.gallery a', {});
     }, options);
     event.preventDefault();
     ImageGalleryEl.innerHTML = '';
 
     const { hits } = await FetchImages(ImageSearchInputEl.value);
+    const lightbox = new SimpleLightbox('.gallery a', {});
 
     if (hits.length == 0) {
       Notiflix.Notify.failure(
@@ -53,8 +54,6 @@ async function SubmitRequest(event) {
     setTimeout(() => {
       observer.observe(document.querySelector('.observing'));
     }, 100);
-
-    const lightbox = new SimpleLightbox('.gallery a', {});
   } catch (err) {
     console.log(err);
   }
